@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "dev": "nuxt",
-    "build": "nuxt build",
+    "build": "nuxt build --no-lock",
     "start": "nuxt start",
     "deploy": "nuxt generate && firebase deploy --project zakimotosite",
     "generate": "nuxt generate",
@@ -14,7 +14,12 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
+    "@nuxtjs/axios": "^5.4.1",
+    "element-ui": "2.4.11",
+    "lodash.clonedeep": "^4.5.0",
+    "moment": "^2.24.0",
     "nuxt": "^2.0.0",
+    "universal-cookie": "^3.1.0",
     "vue": "^2.6.10"
   },
   "devDependencies": {

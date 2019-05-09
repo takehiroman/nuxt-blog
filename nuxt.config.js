@@ -1,6 +1,9 @@
 module.exports = {
   mode: 'universal',
   srcDir: 'app',
+  router: {
+    middleware: ['auth-cookie']
+  },
   /*
    ** Headers of the page
    */
@@ -17,6 +20,26 @@ module.exports = {
    ** Customize the progress bar color
    */
   loading: { color: '#3B8070' },
+  modules: [
+    '@nuxtjs/axios'
+  ],
+  /**
+   * APIServer
+   */
+  axios: {
+    baseURL: 'https://zakimotosite.firebaseio.com'
+  },
+    /*
+  ** Global CSS
+  */
+  css: [
+    'element-ui/lib/theme-chalk/reset.css',
+    'element-ui/lib/theme-chalk/index.css',
+    '~/assets/common.css'
+  ],
+  plugins: [
+    '@/plugins/element-ui'
+  ],
   /*
    ** Build configuration
    */
